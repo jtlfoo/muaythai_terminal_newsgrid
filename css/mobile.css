@@ -1,0 +1,101 @@
+/* Navigation */
+#main-nav .container {
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+#main-nav .logo {
+  display: block;
+  text-align: center;
+  justify-self: center;
+}
+
+#main-nav .logo .raja-logo {
+  padding-right: 0px;
+}
+
+#main-nav ul {
+  justify-self: center;
+  margin-top: 1rem;
+}
+
+#main-nav ul li a {
+  padding: 0.7rem 2rem;
+}
+
+/* Home Articles */
+
+#home-articles .articles-container {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#home-articles .articles-container > *:first-child,
+#home-articles .articles-container > *:last-child {
+  grid-template-columns:  1fr;
+  grid-column: 1;
+}
+
+/* Showcase */
+#showcase {
+  text-align: center;
+}
+
+#showcase .showcase-container {
+  grid-template-columns: 1fr;
+}
+
+/* Footer */
+#main-footer .footer-container .footer-logo {
+  display: none;
+}
+
+#main-footer .footer-container .list li,
+#article .card .list {
+  width: 100%;
+}
+
+#main-footer .footer-container {
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem;
+  grid-gap: 0.5rem;
+  text-align: center;
+}
+
+.l-heading {
+  font-size: 1.5rem;
+}
+
+/* Stack Grid Items */
+
+@media(max-width: 600px) {
+  #showcase .showcase-container,
+  #home-articles .articles-container,
+  #main-footer .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  #main-footer .footer-container > *:last-child {
+    grid-column: 1;
+  }
+
+  #main-footer .footer-container > * {
+    border-bottom: #444 dotted 1px;
+    padding-bottom: 1rem;
+  }
+
+  #main-footer .footer-container > *:nth-child(4),
+  #main-footer .footer-container > *:nth-child(3),
+  #main-footer .footer-container > *:nth-child(1) {
+    border: none;
+  }
+
+  .page-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  #showcase {
+    padding: 0rem;
+  }
+  
+}
